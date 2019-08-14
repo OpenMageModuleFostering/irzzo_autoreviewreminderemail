@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+
+<!--
+    Document   : mcautoreviewreminderemail.xml
+    Created on : May 10, 2012, 3:05 PM
+    Author     : Magento Complete
+    Description:
+    Purpose of the document follows.
+-->
+<layout version="0.1.0">
+    <mcautoreviewreminderemail_product_index>
+        <reference name="content">
+            <block type="core/template" name="review.index" template="MC/Mcautoreviewreminderemail/index.phtml" />
+        </reference>
+    </mcautoreviewreminderemail_product_index>
+
+    <mcautoreviewreminderemail_product_orderitems>
+        <reference name="content">
+            <block type="mcautoreviewreminderemail/orderItems" name="reviewsorderitems" template="MC/Mcautoreviewreminderemail/orderItems.phtml" />
+        </reference>
+    </mcautoreviewreminderemail_product_orderitems>
+
+    <review_product_reviewform>
+        <reference name="content">
+            <block type="review/form" name="product.review.form" as="review_form">
+                <action method="setTemplate"><template>MC/Mcautoreviewreminderemail/form.phtml</template></action>
+            </block>
+        </reference>
+    </review_product_reviewform>
+	
+	<mcautoreviewreminderemail_product_loadmorereviews>
+        <reference name="content">
+            <block type="mcautoreviewreminderemail/loadmorereviews" output="toHtml" name="root" template="MC/Mcautoreviewreminderemail/loadmorereviews.phtml" />
+        </reference>
+    </mcautoreviewreminderemail_product_loadmorereviews>
+	
+</layout>

@@ -1,0 +1,58 @@
+<?php
+/**
+ * Magento [Extension]
+ * @filename orderItems.phtml
+ * @package MC_Mcautoreviewreminderemail
+ * @author Magento Complete
+ * @category    MC
+ * @package     MC_Mcautoreviewreminderemail
+ */
+
+$order = $this->getOrder();
+$billingAddress = $this->getBillingAddress();
+$items = $this->getOrderItems();
+?>
+
+<h3>Product Review</h3>
+
+<?php if($order){ ?>
+    <?php if ($billingAddress) { ?>
+        <p>Thank you <?php echo $billingAddress->getFirstname() ?> <?php echo $billingAddress->getLastname()." for using  ".Mage::getBaseUrl(); ?> </p>
+        <p>Your purchase information are following:</p>
+        <br/><br/>
+    <?php } ?>
+
+    <p>
+        <div><b>Purchased On#</b> <?php echo date('F j, Y', strtotime($order->getCreatedAt())) ?></div>
+        <div><b>Order#</b> <?php echo $order->getIncrementId() ?></div>
+    </p>
+
+    <?php if ($items) { ?>
+    <table width="100%">
+        <tr>
+            <td><b>Name</b></td>
+            <td><b>Qty</b></td>
+            <td><b>Price</b></td>
+            <td>&nbsp;</td>
+        </tr>
+        <?php foreach ($items as $item) { ?>
+            <tr>
+                <td><?php echo $item->getName() ?></td>
+                <td><?php echo $item->getQtyOrdered() ?></td>
+                <td><?php echo $item->getPrice() ?></td>
+                <td>
+                    <?php if(!$this->isAlreadyReviewed($item->getProductId())){ ?>
+                    <a href="<?php echo $this->getUrl('review/product/reviewForm/id/'.$item->getProductId().'/oid/'.base64_encode($order->getId())); ?>">
+                        Review
+                    </a>
+                    <?php }else{ ?>
+                        <p style="color:green;">Reviewed</p>
+                    <?php } ?>
+                </td>
+            </tr>
+            <?php } ?>
+    </table>
+    <?php } ?>
+<?php }else{ ?>
+    <p style="color:red;">Order not found.</p>
+<?php } ?>

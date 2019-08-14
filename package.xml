@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<package>
+    <name>irzzo_autoreviewreminderemail</name>
+    <version>1.0.4.2</version>
+    <stability>stable</stability>
+    <license uri="http://www.opensource.org/licenses/osl-3.0.php">OSL v3.0</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Provides you the power to send automated emails to customers asking them to review the products purchased.</summary>
+    <description>&lt;p&gt;&lt;strong&gt;Auto Review Reminder &lt;/strong&gt;&lt;/p&gt;&#xD;
+&lt;p&gt;Irzoo&#x2019;s Auto Review Reminder Emailer will 100% get you more customer/client reviews on your websites. Product reviews have a great influence on customers buying decision (to click on purchase Now button or not), as they provide them with added knowledge about the product. Reviews prove that services offered by you are best in class and the product is one they are looking for.&lt;/p&gt;&#xD;
+&lt;p&gt;However, just a few customers take out time to write reviews about the product used, particularly if everything went as expected.&lt;/p&gt;&#xD;
+&lt;p&gt;Auto review reminder emailer provides you the possibility to send email messages to your customers requesting them to review the products they have purchase from your e-commerce store. An automated email is sent after stipulated number of days(configurable by administrator) after order shipment and includes a link that will automatically log in the buyer. &lt;/p&gt;&#xD;
+&lt;p&gt;&lt;/p&gt;&#xD;
+&lt;h2&gt;Obtaining Your Free License Key&lt;/h2&gt;&#xD;
+&lt;p&gt; Contact us at &lt;a href="mailto:support@irzoo.com"&gt;support@irzoo.com&lt;/a&gt; for Free License Key.&lt;/p&gt;&#xD;
+&lt;p&gt;&lt;/p&gt;&#xD;
+&lt;p&gt;&lt;strong&gt;Features of Auto Review Reminder:&lt;/strong&gt;&lt;/p&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;Allows for sending product review reminders automatically&lt;/li&gt;&#xD;
+&lt;li&gt;Allows for choosing status after which reminder must be sent&lt;/li&gt;&#xD;
+&lt;li&gt;Provides Admin with an editable HTML template for reminders&lt;/li&gt;&#xD;
+&lt;li&gt;Multi-store compatible&lt;/li&gt;&#xD;
+&lt;li&gt;Delay Can be configured&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;p&gt;&lt;/p&gt;&#xD;
+&lt;h2&gt;Need more information ?&lt;/h2&gt;&#xD;
+&lt;p&gt;Download &lt;a href="http://www.irzoo.com/documentation/Review_Mail_User_Installation_Guide_1.0.01.pdf"&gt;Review Mail User Manual&lt;/a&gt;&lt;/p&gt;&#xD;
+&lt;p&gt;Take a look at our website for more information : &lt;a href="http://www.irzoo.com/index.php/magento-professional-extensions/auto-review-remainder-emailer.html"&gt;IRZOO&lt;/a&gt;&lt;/p&gt;</description>
+    <notes>The current Auto Review reminder extension has the following features updated :&#xD;
+*Updated Delay functionality&#xD;
+*Updated Mail section&#xD;
+*Updated Cron Job</notes>
+    <authors><author><name>Nitin Gupta</name><user>irzoo</user><email>support@irzoo.com</email></author></authors>
+    <date>2013-02-22</date>
+    <time>12:09:37</time>
+    <contents><target name="mage"><dir name="app"><dir name="code"><dir name="community"><dir name="MC"><dir name="Mcautoreviewreminderemail"><dir name="Block"><file name="OrderItems.php" hash="ec8bd2ac45848919fbb1c5a297e8ef81"/></dir><dir name="Helper"><file name="Data.php" hash="ae57c5fb854298663972b44643b220dc"/></dir><dir name="Model"><file name="Mcautoreviewreminderemail.php" hash="c1495500fca5b5675f2d62fd110233be"/><file name="Mcautoreviewreminderemailconfig.php" hash="be49b753adb847fa09cfb9230306e80d"/><file name="Mcautoreviewreminderemailtemplate.php" hash="24c333e8814ab3f5d139edc87eb57b36"/></dir><dir name="controllers"><file name="ProductController.php" hash="0ac96b4388b0243c1c28f7fa34de39a8"/></dir><dir name="etc"><file name="adminhtml.xml" hash="1a75635dc4af87408bd179753ae06f86"/><file name="config.xml" hash="db263f48d111838b02a34b750dfe3316"/><file name="system.xml" hash="f904836fb5c360f37d5768e9a57b31ff"/></dir><dir name="sql"><dir name="mcautoreviewreminderemail_setup"><file name="mysql4-install-1.0.4.2.php" hash="6981afef458486650f0ce78c0527e963"/></dir></dir></dir></dir></dir></dir><dir name="design"><dir name="frontend"><dir name="default"><dir name="default"><dir name="layout"><file name="mcautoreviewreminderemail.xml" hash="7c566a39c204e83a55309f2bfadfffa3"/></dir><dir name="template"><dir name="MC"><dir name="Mcautoreviewreminderemail"><file name="form.phtml" hash="360ffad933e92ab8e07e35bcc56b6546"/><file name="index.phtml" hash="a94d21c7aad44514f23edccff49e930f"/><file name="loadmorereviews.phtml" hash="1f5ca476132b2d1f10768e9ff08224cc"/><file name="orderItems.phtml" hash="b93248494d73fb5a8f5406f32f7e57a4"/></dir></dir></dir></dir></dir></dir></dir></dir><dir name="etc"><dir name="modules"><file name="MC_Mcautoreviewreminderemail.xml" hash=""/></dir></dir><dir name="."><file name="Auto Review Reminder Emailer User Installation Guide -edited.pdf" hash="d348caa95a41168e153d1dbd0c888b8c"/><file name="IrzooProductsDemo_Details.pdf" hash="65a9a1bfa5ee8d04ebcf32e2b0dbda4b"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/irzzo_autoreviewreminderemail",
+    "type": "magento-module",
+    "license": "OSL-v3.0",
+    "homepage": "",
+    "description": "Provides you the power to send automated emails to customers asking them to review the products purchased.",
+    "authors": [
+    {
+        "name": "Nitin Gupta",
+        "email": "support@irzoo.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

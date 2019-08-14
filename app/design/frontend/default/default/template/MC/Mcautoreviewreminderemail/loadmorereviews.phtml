@@ -1,0 +1,32 @@
+<?php
+/**
+ * Magento [Extension]
+ * @filename loadmorereviews.phtml
+ * @package MC_Mcautoreviewreminderemail
+ * @author Magento Complete
+ * @category    MC
+ * @package     MC_Mcautoreviewreminderemail
+ */
+
+$product_id = Mage::registry('productId');
+$reviewFrom = Mage::registry('reviewFrom');
+$reviewTo = Mage::registry('reviewTo');
+$reviewsModel = Mage::getModel('reviews/loadmorereviews');
+$reviewsCollection = $reviewsModel->getMoreReview($product_id,$reviewFrom,$reviewTo);
+$htmlstr = '';
+$obj = new Mage_Review_Block_Product_View();
+foreach($reviewsCollection as $_review){
+	
+			$htmlstr .= "<p>".nl2br($obj->htmlEscape($_review->getDetail()))."</p>";
+			$results = $reviewsModel->getRating($_review->getReviewId());
+			foreach ($results as $_vote): 
+								$vote_range[] = $_vote['percent'];			  
+								$htmlstr .= '<li>'.$this->escapeHtml($_vote['rating_code']).'<br />';
+								$htmlstr .= "<span class=\"rating-box\" style=\"width:58%\">                                   
+								<div class=\"rating\" style=\"width:".$_vote['percent']."%;\"></div>
+								</span></li>";
+								endforeach;  
+								$htmlstr .='<span><strong>'.$obj->__("%s ", $obj->htmlEscape($_review->getNickname())) .'</strong>in'.date('F Y', strtotime($_review->getCreatedAt())).'</span>';
+}
+ echo $htmlstr;
+?>
